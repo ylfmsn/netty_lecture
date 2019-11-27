@@ -6,9 +6,7 @@ import io.netty.channel.socket.SocketChannel;
 import io.netty.handler.codec.http.HttpServerCodec;
 
 /**
- * @Description TODO
- * @Author ylf
- * @Date 2019/11/25 0025下午 4:19
+ * @Description
  */
 public class TestServerInitializer extends ChannelInitializer<SocketChannel> {
     @Override
@@ -18,7 +16,5 @@ public class TestServerInitializer extends ChannelInitializer<SocketChannel> {
 
         pipeline.addLast("httpServerCodec", new HttpServerCodec());
         pipeline.addLast("testHttpServerHandler", new TestHttpServerHandler());
-
-
     }
 }
